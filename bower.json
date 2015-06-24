@@ -4,6 +4,6 @@
   "private": true,
   "license": "Apache-2.0",
   "dependencies": {
-    "purecss": "~0.6.0"
+    "pure": "~0.6.0"
   }
 }

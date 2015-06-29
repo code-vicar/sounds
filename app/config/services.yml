@@ -4,6 +4,9 @@ parameters:
 #    parameter_name: value
 
 services:
+    sounds.nasa_api:
+        class: AppBundle\NasaApi\NasaApiClient
+        arguments: ["%nasa_api_key%", "%soundcloud_client_id%", "@buzz"]
     app.twig_extension:
         class: AppBundle\Twig\AppExtension
         public: false

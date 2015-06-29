@@ -4,15 +4,15 @@ namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class DefaultControllerTest extends WebTestCase
+class AboutControllerTest extends WebTestCase
 {
-    public function testIndex()
+    public function testAbout()
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/app/example');
+        $crawler = $client->request('GET', '/about');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertTrue($crawler->filter('html:contains("Homepage")')->count() > 0);
+        $this->assertTrue($crawler->filter('html:contains("Nasa sounds api")')->count() > 0);
     }
 }

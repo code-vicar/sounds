@@ -8,14 +8,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AboutController extends Controller
 {
-	private $about = 'Nasa sounds api';
 
-    /**
-     * @Route("/about", name="about")
-     * @Template
-     */
-    public function aboutAction()
-    {
-        return array('about'=>$this->about);
-    }
+  /**
+   * @Route("/about", name="about")
+   * @Template
+   */
+  public function aboutAction()
+  {
+    $aboutSvc = $this->get('sounds.about_service');
+
+    return array('about'=>$aboutSvc->message);
+  }
 }

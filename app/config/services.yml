@@ -4,6 +4,9 @@ parameters:
 #    parameter_name: value
 
 services:
+    sounds.about_service:
+        class: AppBundle\Services\AboutService
+        arguments: ["%about_message%"]
     sounds.nasa_api:
         class: AppBundle\NasaApi\NasaApiClient
         arguments: ["%nasa_api_key%", "%soundcloud_client_id%", "@buzz"]
